@@ -60,3 +60,5 @@ Recorded 2026-10-23. The instructor considers them all relevant and will answer 
 6. **Assignments and project page**: handouts, deadlines, project milestones.
 7. **Course policies**: academic integrity, accommodations, mental-health statement, detailed AI-use rules, on the site or linked to LEARN.
 8. **Home page**: show announcements or latest notes, or keep it as is?
+
+**Planned design change (instructor, 2026-10-23):** once the logistics in question 3 are known, try a side panel to the right of the home-page description on wide screens. It would hold term, meeting time and room, office hours, and the Syllabus / PDF / Notes links, and drop below the description on phones. This fills the empty space beside the paragraph. The paragraph keeps its 44rem limit (about 75–80 characters per line) for readability. Until then, the layout stays as it is.
