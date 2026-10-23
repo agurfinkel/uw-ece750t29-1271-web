@@ -42,7 +42,7 @@ ssh agurfink@ecelinux4.uwaterloo.ca 'sh -s' < publish-uw.sh
 1. Create the empty public repository `agurfinkel/uw-ece750t29-1271` on GitHub (no README).
 2. `git remote add origin git@github.com:agurfinkel/uw-ece750t29-1271.git && git push -u origin main`
 3. Repository Settings → Pages → Source: **GitHub Actions**. Re-run the workflow once if the first run happened before this.
-4. The script replaces everything in `~/public_html/ece750t29`, which currently holds the 2019 site. Move that aside first if you want to keep it: `ssh agurfink@ecelinux4.uwaterloo.ca 'mv ~/public_html/ece750t29 ~/public_html/ece750t29-1189'` (a local copy of its built files is also in `1189/web/ece750t29/`).
+4. The script replaces everything in `~/public_html/ece750t29`, which currently holds the 2019 site. The 2019 site moves to https://eceweb.uwaterloo.ca/~agurfink/ece750t29f19/; its internal links were rewritten for that address (2026-10-23) in `1189/web/ece750t29/`. Copy it there before the first `publish-uw.sh`.
 
 ## End of term
 
