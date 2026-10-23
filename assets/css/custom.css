@@ -53,6 +53,14 @@ html.dark {
   color: var(--course-muted);
 }
 .content .course-meta strong { color: var(--course-ink); font-weight: 600; }
+.content .course-blurb {
+  max-width: 44rem;
+  margin: 1.1rem 0 0;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--course-ink);
+}
+.content .course-blurb a { color: var(--course-accent); }
 .content .course-links {
   display: flex;
   flex-wrap: wrap;

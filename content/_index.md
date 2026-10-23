@@ -13,6 +13,7 @@ toc: false
 <h1 class="course-title">Automated Verification</h1>
 <p class="course-subtitle">Building Reliable Software in the Age of AI</p>
 <p class="course-meta"><strong>ECE 750 T29</strong> · Graduate course · Instructor <strong>Arie Gurfinkel</strong></p>
+<p class="course-blurb">AI is accelerating software development, and it is just as good at finding and exploiting the weaknesses of existing systems. This course is about establishing that software behaves as intended: formulating correctness claims, checking them with automated verification tools, and judging what a successful check actually guarantees. We move from practical verification tasks to the reasoning behind the tools (verification conditions, SMT solving, memory and ownership, and automatic invariant discovery) and on to proof assistants, where AI agents help build specifications and proofs that students learn to guide and review. Examples come from software libraries, systems code, and compiler transformations. Details are in the <a href="syllabus/">syllabus</a>.</p>
 <nav class="course-links">
 <a class="course-btn" href="syllabus/">Syllabus</a>
 <a class="course-btn" href="syllabus.pdf">Syllabus PDF</a>
