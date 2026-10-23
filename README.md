@@ -52,7 +52,7 @@ The `uw-site` branch and the UW copy are already plain HTML and need no toolchai
 
 Recorded 2026-10-23. The instructor considers them all relevant and will answer later. None is decided; the prototype includes none of these features.
 
-1. **Hosting and URL**: GitHub Pages, UW GitLab, or the old `ece.uwaterloo.ca/~agurfink/...` location? This determines the link to put in the syllabus and `baseURL` in `hugo.yaml`.
+1. ~~**Hosting and URL**~~ Answered 2026-10-23: GitHub Pages plus a UW mirror at the old address (see Hosting). Still open: which of the two addresses goes in the syllabus.
 2. **Readings visibility**: publish all primary readings before term (as the prototype does, taken from the internal outline) or reveal them week by week?
 3. **Logistics**: meeting time and room, office hours, TA, contact details (the old site had an instructor/TA table).
 4. **Communication and submission**: Piazza, Discord, or LEARN; where assignments are submitted.
