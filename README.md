@@ -30,17 +30,17 @@ Do not edit files under `themes/hextra/`; customize only through the files above
 | Copy | Address | Updated by |
 |---|---|---|
 | UW (official; the address students get) | https://ece.uwaterloo.ca/~agurfink/ece750t29/ | Running `publish-uw.sh` after the GitHub build finishes |
-| GitHub Pages (build copy, always current) | https://agurfinkel.github.io/uw-ece750t29-1271/ | Every push to `main`, automatically, about a minute later |
+| GitHub Pages (build copy, always current) | https://agurfinkel.github.io/uw-ece750t29-1271-web/ | Every push to `main`, automatically, about a minute later |
 
-Source repository: https://github.com/agurfinkel/uw-ece750t29-1271 (public). No local Hugo is needed to update the site: edit the Markdown (locally or in GitHub's web editor), push, and GitHub rebuilds both copies. The UW copy is plain HTML stored on the `uw-site` branch; `publish-uw.sh` downloads it and syncs it into `~/public_html/ece750t29` (needs only curl, tar, rsync on ecelinux):
+Source repository: https://github.com/agurfinkel/uw-ece750t29-1271-web (public). No local Hugo is needed to update the site: edit the Markdown (locally or in GitHub's web editor), push, and GitHub rebuilds both copies. The UW copy is plain HTML stored on the `uw-site` branch; `publish-uw.sh` downloads it and syncs it into `~/public_html/ece750t29` (needs only curl, tar, rsync on ecelinux):
 
 ```sh
 ssh agurfink@ecelinux4.uwaterloo.ca 'sh -s' < publish-uw.sh
 ```
 
 **First-time setup**
-1. Create the empty public repository `agurfinkel/uw-ece750t29-1271` on GitHub (no README).
-2. `git remote add origin git@github.com:agurfinkel/uw-ece750t29-1271.git && git push -u origin main`
+1. Create the empty public repository `agurfinkel/uw-ece750t29-1271-web` on GitHub (no README).
+2. `git remote add origin git@github.com:agurfinkel/uw-ece750t29-1271-web.git && git push -u origin main`
 3. Repository Settings → Pages → Source: **GitHub Actions**. Re-run the workflow once if the first run happened before this.
 4. The script replaces everything in `~/public_html/ece750t29`, which currently holds the 2019 site. The 2019 site moves to https://eceweb.uwaterloo.ca/~agurfink/ece750t29f19/; its internal links were rewritten for that address (2026-10-23) in `1189/web/ece750t29/`. Copy it there before the first `publish-uw.sh`.
 
