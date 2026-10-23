@@ -5,7 +5,7 @@
 #   From the Mac:  ssh agurfink@ecelinux4.uwaterloo.ca 'sh -s' < publish-uw.sh
 # Replaces the contents of DEST, so wait for the GitHub build to finish first.
 set -eu
-REPO=agurfinkel/uw-ece750t29-1271
+REPO=agurfinkel/uw-ece750t29-1271-web
 DEST="$HOME/public_html/ece750t29"
 TMP=$(mktemp -d)
 trap 'rm -rf "$TMP"' EXIT

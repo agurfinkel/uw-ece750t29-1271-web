@@ -1,5 +1,5 @@
 # On every push to main, build the site with the pinned Hugo and
-#  1. publish it to GitHub Pages (https://agurfinkel.github.io/uw-ece750t29-1271/)
+#  1. publish it to GitHub Pages (https://agurfinkel.github.io/uw-ece750t29-1271-web/)
 #  2. store a second build for the UW mirror (https://ece.uwaterloo.ca/~agurfink/ece750t29/)
 #     as plain HTML on the `uw-site` branch; publish-uw.sh copies it into public_html.
 # Enable once in the repository: Settings → Pages → Source: GitHub Actions.
@@ -20,18 +20,18 @@ env:
   UW_BASE_URL: https://ece.uwaterloo.ca/~agurfink/ece750t29/
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Install Hugo
         run: |
           wget -q -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
           sudo dpkg -i hugo.deb
       - id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Build for GitHub Pages
         run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: public
       - name: Build for the UW mirror and push to the uw-site branch
@@ -45,10 +45,10 @@ jobs:
           git push -q -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" uw-site
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
