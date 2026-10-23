@@ -1,0 +1,83 @@
+# ECE 750 T29 course site (Winter 2027).
+# Build: hugo --minify     Preview: hugo server
+# Pinned toolchain: Hugo 0.168.0 extended, Hextra v0.13.0 (vendored in themes/hextra).
+baseURL: "https://ece.uwaterloo.ca/~agurfink/ece750t29/"   # UW mirror; GitHub Pages build overrides this
+title: "ECE 750 T29"
+theme: hextra
+
+enableRobotsTXT: true
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.146.0"
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
+        enable: true
+
+menu:
+  main:
+    - name: Syllabus
+      pageRef: /syllabus
+      weight: 1
+    - name: Schedule
+      pageRef: /schedule
+      weight: 2
+    - name: Notes
+      pageRef: /notes
+      weight: 3
+    - name: Search
+      weight: 4
+      params:
+        type: search
+
+params:
+  description: "ECE 750 T29: Automated Verification. Building Reliable Software in the Age of AI. University of Waterloo, Winter 2027."
+
+  navbar:
+    displayTitle: true
+    displayLogo: false
+    width: normal
+
+  page:
+    width: normal
+
+  theme:
+    default: system
+    displayToggle: true
+
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: false
+    width: normal
+
+  displayUpdatedDate: false
+
+  search:
+    enable: true
+    type: flexsearch
+
+  editURL:
+    enable: false
+
+  blog:
+    list:
+      displayTags: true
+      sortBy: date
+      sortOrder: desc
+
+  highlight:
+    copy:
+      enable: true
+      display: hover
